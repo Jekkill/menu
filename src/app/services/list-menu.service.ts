@@ -13,9 +13,7 @@ export class ListMenuService {
   	this.items = data.tree;
   }
 
-  // get all menu items from file with json extension;
   getAllMenuItems() {
-    
   	return this.items;
   }
 

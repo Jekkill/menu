@@ -8,7 +8,6 @@ import { ListMenuService } from './services/list-menu.service';
 })
 
 export class AppComponent {
-  // title = 'test-app';
   allItems = [];
   
   constructor(
@@ -17,6 +16,5 @@ export class AppComponent {
 
   ngOnInit() {
   	this.allItems = this.listMenuService.getAllMenuItems();
-  	// console.log(this.items);
   }
 }
