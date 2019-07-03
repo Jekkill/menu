@@ -1,0 +1,12 @@
+<div *ngFor="let item of items">
+  <ul>
+   <li class="{{ item.type === 'folder' ? 'folder': 'insert_drive_file' }}_container">
+   	 <p class="element_for_open_sub_directory" (click)="toggleDirectory(e)"> 
+     <i class="material-icons">{{ item.type === 'folder' ? 'folder': 'insert_drive_file' }}</i> {{item.name}} </p> 
+     <div class="sub_directory"> 
+     	<app-item [items]="item.children | orderBy " 
+         *ngIf="item.type == 'folder'"></app-item>
+     </div>
+   </li>
+  </ul>
+</div>
